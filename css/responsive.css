@@ -1,0 +1,93 @@
+.lang-fr .main__advantage-desc {
+    font-size: 11px;
+}
+
+.lang-de,
+.lang-fr,
+.lang-pt {
+    .subscription-plans__item {
+        padding-right: 24px;
+    }
+}
+
+.lang-de,
+.lang-fr {
+    .footer__list {
+        width: 100%;
+    }
+}
+
+@media (width: 375px) and (height: 667px) {
+    body {
+        background-position: 50% 30%;
+    }
+
+    .main__title {
+        padding-bottom: 16px;
+    }
+
+    .subscription-plans {
+        padding: 26px 0;
+    }
+
+    .subscription-plans__continue-btn {
+        margin-top: 0;
+    }
+
+    .lang-de .main__advantage-desc {
+        font-size: 11px;
+    }
+
+    .lang-de,
+    .lang-fr {
+        .subscription-plans__item {
+            font-size: 14px;
+        }
+
+        .item__title {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (width: 414px) and (height: 736px) {
+    body {
+        background-position: 50% 30%;
+    }
+
+    .main__title {
+        padding-bottom: 16px;
+    }
+
+    .subscription-plans {
+        padding: 26px 0;
+    }
+
+    .subscription-plans__continue-btn {
+        margin-top: 0;
+    }
+}
+
+@media (width: 375px) and (height: 812px) {
+    .lang-de .main__advantage-desc {
+        font-size: 11px;
+    }
+
+    .lang-de,
+    .lang-fr {
+        .subscription-plans__item,
+        .item__title {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (width: 390px) and (height: 844px) {
+    .lang-de,
+    .lang-fr {
+        .subscription-plans__item,
+        .item__title {
+            font-size: 14px;
+        }
+    }
+}

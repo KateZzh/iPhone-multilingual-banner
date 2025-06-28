@@ -1,0 +1,217 @@
+.container {
+    max-width: 414px;
+    width: 100%;
+
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin: 0 auto;
+    padding: calc(env(safe-area-inset-top) + 10%) 24px calc(env(safe-area-inset-bottom) + 8px);
+}
+
+.close-btn {
+    position: absolute;
+    content: url('../assets/icons/close-icon.svg');
+    width: 24px;
+    height: 24px;
+    top: 16px;
+    left: 16px;
+}
+
+.main__title {
+    font: 900 42px 'SF Pro Text';
+    line-height: 110%;
+    text-align: center;
+    padding-bottom: 24px;
+}
+
+.main__advantages {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+.main__advantage {
+    max-width: 110px;
+    width: 100%;
+    min-height: 146px;
+    display: flex;
+    align-items: end;
+    border-radius: 16px;
+}
+
+.main__advantage--image1 {
+    background-image: image-set(
+        url(../assets/img/advantage-1_1x.png) 1x,
+        url(../assets/img/advantage-1_2x.webp) type('image/webp') 2x,
+        url(../assets/img/advantage-1_3x.webp) type('image/webp') 3x,
+        url(../assets/img/advantage-1_2x.png) 2x,
+        url(../assets/img/advantage-1_3x.png) 3x
+    );
+}
+
+.main__advantage--image2 {
+    background-image: image-set(
+        url(../assets/img/advantage-2_1x.png) 1x,
+        url(../assets/img/advantage-2_2x.webp) type('image/webp') 2x,
+        url(../assets/img/advantage-2_3x.webp) type('image/webp') 3x,
+        url(../assets/img/advantage-2_2x.png) 2x,
+        url(../assets/img/advantage-2_3x.png) 3x
+    );
+}
+
+.main__advantage--image3 {
+    background-image: image-set(
+        url(../assets/img/advantage-3_1x.png) 1x,
+        url(../assets/img/advantage-3_2x.webp) type('image/webp') 2x,
+        url(../assets/img/advantage-3_3x.webp) type('image/webp') 3x,
+        url(../assets/img/advantage-3_2x.png) 2x,
+        url(../assets/img/advantage-3_3x.png) 3x
+    );
+}
+
+.main__advantage--image1,
+.main__advantage--image2,
+.main__advantage--image3 {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main__advantage-desc {
+    font: 400 12px 'SF Pro Text';
+    padding: 0 8px 12px;
+}
+
+.subscription-plans {
+    padding: 34px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.subscription-plans__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 9px 56px 9px 24px;
+    border-radius: 100px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid #fff;
+    font-size: 16px;
+    height: 56px;
+
+    position: relative;
+}
+
+.item__badge-wrapper {
+    border-radius: 100px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
+    padding: 1px;
+    background: #fff;
+    position: absolute;
+    top: -10px;
+    right: 24px;
+}
+
+.item__badge-wrapper::before,
+.item__badge-wrapper::after {
+    display: none;
+}
+
+.item__badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 117px;
+    height: 18px;
+    font: 700 12px 'Roboto';
+    border-radius: 98px;
+    background: #fff;
+    color: #141131;
+}
+
+.item__badge--active {
+    background-image: linear-gradient(90deg, #bc1fef 0%, #0035ff 100%);
+    color: #fff;
+}
+
+.item__badge-wrapper--active {
+    background-image: linear-gradient(90deg, #ff96f4 0%, #632af7 53%, #00b5ff 100%);
+}
+
+.item__badge--active::before {
+    content: '';
+    display: block;
+    width: 126px;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, #fd94f4);
+
+    position: absolute;
+    top: 9px;
+    right: 118px;
+}
+
+.item__badge--active::after {
+    content: url('../assets/icons/border-right.svg');
+    display: block;
+    width: 26px;
+    height: 29px;
+
+    position: absolute;
+    top: 9px;
+    right: -25px;
+}
+
+.item--active {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.item__title {
+    font: 600 16px 'SF Pro Display';
+}
+
+.item__desc,
+.item__price {
+    opacity: 0.7;
+}
+
+.subscription-plans__continue-btn {
+    font: 590 20px 'SF Pro Text';
+    color: #070b33;
+    text-align: center;
+    line-height: 120%;
+    padding: 16px 0;
+    width: 100%;
+    border-radius: 100px;
+    background-color: #fff;
+    margin-top: 8px;
+}
+
+.footer {
+    margin: 0 auto;
+}
+
+.footer__list {
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.3;
+}
+
+.footer__item {
+    font: 200 13px 'SF Pro Display';
+    line-height: 138%;
+    text-decoration-skip-ink: none;
+    text-decoration: underline;
+}
+
+.footer__link {
+    color: #fff;
+}
