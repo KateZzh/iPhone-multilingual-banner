@@ -12,6 +12,14 @@
 
 .lang-de,
 .lang-fr {
+    .subscription-plans__item {
+        font-size: 14px;
+    }
+
+    .item__title {
+        font-size: 14px;
+    }
+
     .footer__list {
         width: 100%;
     }
@@ -37,17 +45,6 @@
     .lang-de .main__advantage-desc {
         font-size: 11px;
     }
-
-    .lang-de,
-    .lang-fr {
-        .subscription-plans__item {
-            font-size: 14px;
-        }
-
-        .item__title {
-            font-size: 14px;
-        }
-    }
 }
 
 @media (width: 414px) and (height: 736px) {
@@ -71,23 +68,5 @@
 @media (width: 375px) and (height: 812px) {
     .lang-de .main__advantage-desc {
         font-size: 11px;
-    }
-
-    .lang-de,
-    .lang-fr {
-        .subscription-plans__item,
-        .item__title {
-            font-size: 14px;
-        }
-    }
-}
-
-@media (width: 390px) and (height: 844px) {
-    .lang-de,
-    .lang-fr {
-        .subscription-plans__item,
-        .item__title {
-            font-size: 14px;
-        }
     }
 }
