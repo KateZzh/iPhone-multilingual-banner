@@ -1,10 +1,7 @@
-.lang-fr .main__advantage-desc {
-    font-size: 11px;
-}
-
 .lang-de,
 .lang-fr,
-.lang-pt {
+.lang-pt,
+.lang-es {
     .subscription-plans__item {
         padding-right: 24px;
     }
@@ -12,6 +9,10 @@
 
 .lang-de,
 .lang-fr {
+    .main__advantage-desc {
+        font-size: 11px;
+    }
+
     .subscription-plans__item {
         font-size: 14px;
     }
@@ -68,5 +69,20 @@
 @media (width: 375px) and (height: 812px) {
     .lang-de .main__advantage-desc {
         font-size: 11px;
+    }
+}
+
+@media (max-width: 374px) {
+    .lang-fr {
+        .main__advantage-desc {
+            padding-right: 4px;
+        }
+    }
+
+    .lang-de,
+    .lang-fr {
+        .footer__item {
+            font-size: 12px;
+        }
     }
 }

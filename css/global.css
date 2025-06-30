@@ -93,6 +93,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    min-width: 375px;
+    min-width: 360px;
     overflow-x: hidden;
 }

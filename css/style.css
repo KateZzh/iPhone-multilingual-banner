@@ -1,9 +1,7 @@
 .container {
     max-width: 414px;
     width: 100%;
-
     min-height: 100%;
-
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -34,8 +32,8 @@
 }
 
 .main__advantage {
-    max-width: 110px;
     width: 100%;
+    max-width: 110px;
     min-height: 146px;
     display: flex;
     align-items: end;
@@ -95,7 +93,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 25px;
+    gap: 20px;
     padding: 9px 56px 9px 24px;
     border-radius: 100px;
     background-color: rgba(255, 255, 255, 0.3);
