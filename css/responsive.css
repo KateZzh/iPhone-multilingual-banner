@@ -5,6 +5,14 @@
     .subscription-plans__item {
         padding-right: 24px;
     }
+
+    .item__badge {
+        font-size: 11px;
+    }
+
+    .footer__list {
+        width: 100%;
+    }
 }
 
 .lang-de,
@@ -13,22 +21,38 @@
         font-size: 11px;
     }
 
+    .item__title,
     .subscription-plans__item {
         font-size: 14px;
     }
 
-    .item__title {
-        font-size: 14px;
+    .footer__item {
+        font-size: 11px;
+    }
+}
+
+@media (width: 375px) and (height: 812px) {
+    .container {
+        padding-top: max(44px, env(safe-area-inset-top));
     }
 
-    .footer__list {
-        width: 100%;
+    .close-btn {
+        top: calc(max(44px, env(safe-area-inset-top)) + 16px);
     }
 }
 
 @media (width: 375px) and (height: 667px) {
     body {
-        background-position: 50% 30%;
+        background-position: 50% 25%;
+    }
+
+    .container {
+        padding-top: max(21px, env(safe-area-inset-top));
+        padding-bottom: max(8px, env(safe-area-inset-bottom));
+    }
+
+    .close-btn {
+        top: calc(max(21px, env(safe-area-inset-top)) + 16px);
     }
 
     .main__title {
@@ -50,7 +74,16 @@
 
 @media (width: 414px) and (height: 736px) {
     body {
-        background-position: 50% 30%;
+        background-position: 50% 25%;
+    }
+
+    .container {
+        padding-top: max(21px, env(safe-area-inset-top));
+        padding-bottom: max(8px, env(safe-area-inset-bottom));
+    }
+
+    .close-btn {
+        top: calc(max(21px, env(safe-area-inset-top)) + 16px);
     }
 
     .main__title {
@@ -73,16 +106,38 @@
 }
 
 @media (max-width: 374px) {
+    .lang-en {
+        .subscription-plans__item {
+            padding-right: 24px;
+        }
+    }
+
     .lang-fr {
         .main__advantage-desc {
-            padding-right: 4px;
+            padding-right: 2px;
         }
     }
 
     .lang-de,
     .lang-fr {
         .footer__item {
-            font-size: 12px;
+            font-size: 10px;
+        }
+    }
+
+    .lang-de,
+    .lang-fr,
+    .lang-es {
+        .subscription-plans__item {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+
+    .lang-pt {
+        .item__title,
+        .subscription-plans__item {
+            font-size: 14px;
         }
     }
 }

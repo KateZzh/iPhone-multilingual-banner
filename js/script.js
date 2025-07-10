@@ -21,7 +21,7 @@ function changeActive(index) {
     continueBtn.setAttribute('href', activeItem.getAttribute('data-link'));
 }
 
-changeActive(0);
+changeActive(1);
 
 subscriptionPlansContainer.addEventListener('click', (e) => {
     const item = e.target.closest('.subscription-plans__item');
@@ -31,14 +31,3 @@ subscriptionPlansContainer.addEventListener('click', (e) => {
         changeActive(index);
     }
 });
-
-const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-if (isIOS) {
-    function setVH() {
-        const vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-    }
-
-    window.addEventListener('resize', setVH);
-    setVH();
-}

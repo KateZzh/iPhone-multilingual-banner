@@ -1,57 +1,3 @@
-@font-face {
-    font-family: 'SF Pro Display';
-    src: url('../fonts/SFProDisplay-Regular.woff2') format('woff2'),
-        url('../fonts/SF-Pro-Display-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'SF Pro Display';
-    src: url('../fonts/SFProDisplay-Semibold.woff2') format('woff2'),
-        url('../fonts/SF-Pro-Display-Semibold.otf') format('opentype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'SF Pro Display';
-    src: url('../fonts/SFProDisplay-Thin.woff2') format('woff2'),
-        url('../fonts/SF-Pro-Display-Thin.otf') format('opentype');
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'SF Pro Text';
-    src: url('../fonts/SFProText-Regular.woff2') format('woff2'),
-        url('../fonts/SF-Pro-Text-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'SF Pro Text';
-    src: url('../fonts/SFProText-Semibold.woff2') format('woff2'),
-        url('../fonts/SF-Pro-Text-Semibold.otf') format('opentype');
-    font-weight: 590;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Bold.woff2') format('woff2'), url('../fonts/Roboto-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'SF Pro Text';
-    src: url('../fonts/SFProText-Heavy.woff2') format('woff2'), url('../fonts/SF-Pro-Text-Heavy.otf') format('opentype');
-    font-weight: 900;
-    font-style: normal;
-}
-
 *,
 *::before,
 *::after {
@@ -69,30 +15,29 @@ ul {
     list-style: none;
 }
 
-:root {
-    --vh: 1vh;
-}
-
 body {
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
-
-    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    height: 100svh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
     color: #fff;
     background-image: image-set(
-        url(../assets/img/bg_1x.png) 1x,
+        url(../assets/img/bg_1x.jpg) 1x,
         url(../assets/img/bg_2x.webp) type('image/webp') 2x,
         url(../assets/img/bg_3x.webp) type('image/webp') 3x,
-        url(../assets/img/bg_2x.png) 2x,
-        url(../assets/img/bg_3x.png) 3x
+        url(../assets/img/bg_2x.jpg) 2x,
+        url(../assets/img/bg_3x.jpg) 3x
     );
-    background-repeat: no-repeat;
+
     background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+
     min-width: 360px;
     overflow-x: hidden;
 }

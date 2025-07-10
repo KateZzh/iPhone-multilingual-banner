@@ -6,7 +6,10 @@
     flex-direction: column;
     justify-content: end;
     margin: 0 auto;
-    padding: calc(env(safe-area-inset-top) + 10%) 24px calc(env(safe-area-inset-bottom) + 8px);
+    padding-top: max(48px, env(safe-area-inset-top));
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-bottom: calc(max(34px, env(safe-area-inset-bottom)) + 4px);
 }
 
 .close-btn {
@@ -14,12 +17,13 @@
     content: url('../assets/icons/close-icon.svg');
     width: 24px;
     height: 24px;
-    top: 16px;
+    top: calc(max(48px, env(safe-area-inset-top)) + 16px);
     left: 16px;
 }
 
 .main__title {
-    font: 900 42px 'SF Pro Text';
+    font-weight: 900;
+    font-size: 42px;
     line-height: 110%;
     text-align: center;
     padding-bottom: 24px;
@@ -42,31 +46,31 @@
 
 .main__advantage--image1 {
     background-image: image-set(
-        url(../assets/img/advantage-1_1x.png) 1x,
+        url(../assets/img/advantage-1_1x.jpg) 1x,
         url(../assets/img/advantage-1_2x.webp) type('image/webp') 2x,
         url(../assets/img/advantage-1_3x.webp) type('image/webp') 3x,
-        url(../assets/img/advantage-1_2x.png) 2x,
-        url(../assets/img/advantage-1_3x.png) 3x
+        url(../assets/img/advantage-1_2x.jpg) 2x,
+        url(../assets/img/advantage-1_3x.jpg) 3x
     );
 }
 
 .main__advantage--image2 {
     background-image: image-set(
-        url(../assets/img/advantage-2_1x.png) 1x,
+        url(../assets/img/advantage-2_1x.jpg) 1x,
         url(../assets/img/advantage-2_2x.webp) type('image/webp') 2x,
         url(../assets/img/advantage-2_3x.webp) type('image/webp') 3x,
-        url(../assets/img/advantage-2_2x.png) 2x,
-        url(../assets/img/advantage-2_3x.png) 3x
+        url(../assets/img/advantage-2_2x.jpg) 2x,
+        url(../assets/img/advantage-2_3x.jpg) 3x
     );
 }
 
 .main__advantage--image3 {
     background-image: image-set(
-        url(../assets/img/advantage-3_1x.png) 1x,
+        url(../assets/img/advantage-3_1x.jpg) 1x,
         url(../assets/img/advantage-3_2x.webp) type('image/webp') 2x,
         url(../assets/img/advantage-3_3x.webp) type('image/webp') 3x,
-        url(../assets/img/advantage-3_2x.png) 2x,
-        url(../assets/img/advantage-3_3x.png) 3x
+        url(../assets/img/advantage-3_2x.jpg) 2x,
+        url(../assets/img/advantage-3_3x.jpg) 3x
     );
 }
 
@@ -78,7 +82,8 @@
 }
 
 .main__advantage-desc {
-    font: 400 12px 'SF Pro Text';
+    font-weight: 400;
+    font-size: 12px;
     padding: 0 8px 12px;
 }
 
@@ -94,31 +99,40 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    padding: 9px 56px 9px 24px;
+    padding-left: 24px;
+    padding-right: 56px;
     border-radius: 100px;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    border: 1px solid #fff;
+    border: none;
+    font-weight: 400;
     font-size: 16px;
     height: 56px;
 
     position: relative;
 }
 
+.item--active {
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
 .item__badge-wrapper {
     border-radius: 100px;
     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
     padding: 1px;
-    background: #fff;
+    background: linear-gradient(90deg, #ff96f4 0%, #632af7 53%, #00b5ff 100%);
+
     position: absolute;
     top: -10px;
     right: 24px;
 }
 
-.item__badge-wrapper::before,
-.item__badge-wrapper::after {
-    display: none;
+.item__badge-wrapper--active {
+    background: #fff;
+    top: -11px;
+    right: 23px;
 }
 
 .item__badge {
@@ -127,22 +141,16 @@
     justify-content: center;
     width: 117px;
     height: 18px;
-    font: 700 12px 'Roboto';
+    font-weight: 700;
+    font-size: 13px;
     border-radius: 98px;
-    background: #fff;
-    color: #141131;
-}
-
-.item__badge--active {
-    background-image: linear-gradient(90deg, #bc1fef 0%, #0035ff 100%);
+    /* background: #fff;
+    color: #141131; */
+    background: linear-gradient(90deg, #bc1fef 0%, #0035ff 100%);
     color: #fff;
 }
 
-.item__badge-wrapper--active {
-    background-image: linear-gradient(90deg, #ff96f4 0%, #632af7 53%, #00b5ff 100%);
-}
-
-.item__badge--active::before {
+.item__badge::before {
     content: '';
     display: block;
     width: 126px;
@@ -154,7 +162,7 @@
     right: 118px;
 }
 
-.item__badge--active::after {
+.item__badge::after {
     content: url('../assets/icons/border-right.svg');
     display: block;
     width: 26px;
@@ -165,13 +173,19 @@
     right: -25px;
 }
 
-.item--active {
-    border: none;
-    background-color: rgba(255, 255, 255, 0.1);
+.item__badge--active {
+    background: #fff;
+    color: #141131;
+}
+
+.item__badge--active::before,
+.item__badge--active::after {
+    display: none;
 }
 
 .item__title {
-    font: 600 16px 'SF Pro Display';
+    font-weight: 600;
+    font-size: 16px;
 }
 
 .item__desc,
@@ -180,7 +194,8 @@
 }
 
 .subscription-plans__continue-btn {
-    font: 590 20px 'SF Pro Text';
+    font-weight: 590;
+    font-size: 20px;
     color: #070b33;
     text-align: center;
     line-height: 120%;
@@ -205,10 +220,12 @@
 }
 
 .footer__item {
-    font: 200 13px 'SF Pro Display';
+    font-weight: 200;
+    font-size: 13px;
     line-height: 138%;
     text-decoration-skip-ink: none;
     text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .footer__link {
